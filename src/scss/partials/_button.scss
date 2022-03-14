@@ -1,0 +1,14 @@
+.btnprimary {
+  @include button;
+  background: $primary;
+  margin-bottom: 20px;
+
+  &:hover {
+    background: #258bff;
+    transition: 0.4s ease;
+  }
+
+  &__icon {
+    font-size: 22px;
+  }
+}

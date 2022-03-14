@@ -1,0 +1,22 @@
+.choosephoto {
+  &__question {
+    margin: -5px 0 20px;
+    color: $placeholder-color;
+  }
+
+  &__avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 4px solid $primary;
+    margin-bottom: 30px;
+  }
+
+  &__different {
+    color: $primary;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+}

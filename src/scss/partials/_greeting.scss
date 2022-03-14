@@ -1,0 +1,12 @@
+.greeting {
+  &__signIn {
+    color: $primary;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    cursor: pointer;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}

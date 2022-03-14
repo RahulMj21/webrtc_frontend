@@ -1,0 +1,33 @@
+@mixin button {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 30px;
+  border-radius: 30px;
+  border: none;
+  color: $primary-text;
+  font-size: 18px;
+  gap: 7px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+@mixin flex-align-center($direction) {
+  display: flex;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flex-center($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin flex-custom($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}

@@ -1,0 +1,104 @@
+.rooms {
+  &__head {
+    padding: 1rem 0 3rem;
+    h2 {
+      position: relative;
+      margin-right: 1rem;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 120px;
+        background: $primary;
+        bottom: -8px;
+        left: 0;
+        border-radius: 3px;
+      }
+    }
+  }
+  &__inputBox {
+    background: $input-background;
+    border-radius: 40px;
+    padding: 7px 16px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    color: $text-gray;
+    cursor: text;
+    svg {
+      font-size: 1.2rem;
+      pointer-events: none;
+    }
+  }
+  &__input {
+    flex: 1;
+    background: transparent;
+    color: $text-gray;
+    margin-left: 10px;
+  }
+  .btnprimary {
+    background: $color-green;
+    margin-bottom: 0;
+    height: auto;
+    padding: 10px 25px;
+    svg {
+      margin-top: -3px;
+    }
+    &:hover {
+      background: $color-green-light;
+    }
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  &__card {
+    cursor: pointer;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.09)
+    );
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+  &__persons {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    .person__img {
+      position: relative;
+      .overlaped__img {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+      }
+    }
+    .person__name {
+      p {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        width: 15px;
+        margin-left: 5px;
+      }
+    }
+  }
+  &__personCount {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    justify-content: flex-end;
+    svg {
+      font-size: 1.2rem;
+      margin-left: 5px;
+    }
+  }
+}

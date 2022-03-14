@@ -1,0 +1,57 @@
+.swipe {
+  display: flex;
+  max-width: 650px;
+  width: 90%;
+  justify-content: flex-end;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 10px 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background: $secondary-background;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .active {
+    background: $primary;
+  }
+}
+
+.input__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputbox {
+  display: flex;
+  align-items: center;
+  background: $input-background;
+  padding: 0 15px;
+  width: 270px;
+  height: 50px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+
+  &__logo {
+    width: 30px;
+  }
+
+  &__input {
+    color: $primary-text;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 12px;
+    letter-spacing: 0.4px;
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+  }
+}

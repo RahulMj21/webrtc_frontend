@@ -1,0 +1,23 @@
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(39, 39, 39);
+  &__nav.flex__between {
+    @include flex-custom(row, center, space-between);
+  }
+  &__user {
+    @include flex-align-center(row);
+    gap: 1rem;
+  }
+  &__link {
+    color: $primary-text;
+  }
+
+  &__button {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 10px 15px;
+    height: auto;
+  }
+}

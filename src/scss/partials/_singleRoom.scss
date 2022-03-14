@@ -1,0 +1,98 @@
+.singleRoom {
+  padding-bottom: 0;
+  .heading {
+    @include flex-align-center(row);
+    gap: 0.8rem;
+    margin-bottom: 5rem;
+    &::after {
+      left: 2px;
+    }
+    &:hover svg {
+      transform: translateX(0);
+    }
+    svg {
+      transform: translateX(5px);
+      font-size: 1rem;
+      transition: 0.4s ease;
+    }
+  }
+  &__users {
+    background: $secondary-background;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    min-height: calc(100vh - 212px);
+    padding: 2rem 0;
+    .top {
+      margin-bottom: 2.5rem;
+      @include flex-custom(row, center, space-between);
+      .right {
+        @include flex-center(row);
+        gap: 1.7rem;
+        button {
+          @include flex-custom(row, center, center);
+          gap: 0.5rem;
+          cursor: pointer;
+          text-transform: capitalize;
+          letter-spacing: 1px;
+          font-size: 1.2rem;
+          padding: 0.5rem 1rem;
+          border-radius: 2rem;
+          color: $primary-text;
+          background: $input-background-2;
+          &:active {
+            transform: scale(0.98);
+          }
+          svg {
+            color: $color-yellow;
+          }
+        }
+      }
+    }
+    .roomName {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+  }
+  &__clients {
+    @include flex-align-center(row);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  &__client {
+    @include flex-align-center(column);
+    gap: 5px;
+    p {
+      pointer-events: none;
+    }
+    .img {
+      position: relative;
+      .micContainer {
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+        bottom: 0rem;
+        .mic {
+          font-size: 1.2rem;
+          display: inline-block;
+          position: relative;
+          overflow: hidden;
+          &.off::before {
+            opacity: 1;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            height: 1.1rem;
+            width: 3px;
+            top: 0;
+            left: 50%;
+            background: $color-red;
+            transition: 0.4s ease;
+            transform: translateX(-50%) rotate(-30deg);
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
