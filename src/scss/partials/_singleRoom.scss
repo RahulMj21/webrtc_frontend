@@ -49,8 +49,26 @@
       }
     }
     .roomName {
+      position: relative;
       font-size: 1.3rem;
       letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 65%;
+        height: 4px;
+        background: $color-green;
+        border-radius: 4px;
+        top: 110%;
+        left: 0;
+      }
+      svg {
+        color: $color-green;
+        font-size: 1.5rem;
+      }
     }
   }
   &__clients {

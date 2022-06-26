@@ -1,5 +1,5 @@
 import axios from "../http";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setUser } from "../features/authSlice";
 

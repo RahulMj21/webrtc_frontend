@@ -1,6 +1,7 @@
 .rooms {
   &__head {
     padding: 1rem 0 3rem;
+    gap: 2rem;
     h2 {
       position: relative;
       margin-right: 1rem;
@@ -16,26 +17,6 @@
       }
     }
   }
-  &__inputBox {
-    background: $input-background;
-    border-radius: 40px;
-    padding: 7px 16px;
-    display: flex;
-    align-items: center;
-    width: 250px;
-    color: $text-gray;
-    cursor: text;
-    svg {
-      font-size: 1.2rem;
-      pointer-events: none;
-    }
-  }
-  &__input {
-    flex: 1;
-    background: transparent;
-    color: $text-gray;
-    margin-left: 10px;
-  }
   .btnprimary {
     background: $color-green;
     margin-bottom: 0;
@@ -47,13 +28,21 @@
     &:hover {
       background: $color-green-light;
     }
+    @include media-sm {
+      font-size: 1rem;
+      padding: 8px 25px;
+    }
   }
   &__body {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
   }
   &__card {
+    width: 20rem;
+    max-width: 100%;
     cursor: pointer;
     background: linear-gradient(
       45deg,
@@ -70,8 +59,9 @@
   }
   &__persons {
     display: flex;
+    align-items: center;
+    gap: 1rem;
     justify-content: space-between;
-    padding-bottom: 1rem;
     .person__img {
       position: relative;
       .overlaped__img {

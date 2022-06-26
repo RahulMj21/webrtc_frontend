@@ -6,7 +6,8 @@ const api = axios.create({
 });
 
 // api endpoints
-export const sendPhone = (data) => api.post("/api/send-otp", data);
+export const sendPhone = (data) => api.post("/api/send-phone-otp", data);
+export const sendEmail = (data) => api.post("/api/send-email-otp", data);
 export const sendOTP = (data) => api.post("/api/verify-otp", data);
 export const activateUser = (data) => api.post("/api/activate-user", data);
 export const logout = () => api.post("/api/logout");
