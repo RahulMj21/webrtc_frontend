@@ -96,7 +96,7 @@ export const useWebRTC = (roomId, user) => {
         });
       };
 
-      // add all local tracks to the remote remote connection
+      // add all local tracks to the  remote connection
       localMediaStream.current.getTracks().forEach((track) => {
         connections.current[socketId].addTrack(track, localMediaStream.current);
       });
